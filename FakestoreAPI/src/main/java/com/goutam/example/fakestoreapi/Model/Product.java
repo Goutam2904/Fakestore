@@ -1,13 +1,17 @@
 package com.goutam.example.fakestoreapi.Model;
 
+import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 @Getter
 @Setter
-public class Product {
+@Entity
 
-    private Long id;
+public class Product extends BaseModel implements Serializable {
+
     private String title;
     private String description;
     private String price;
